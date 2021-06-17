@@ -52,7 +52,6 @@ def monitore():
         BT_Wh = float(sys.argv[2])#condition of battery in Wh, given by command inxi -B (ubuntu or mac os)
         power_est = 36*(previouscharge - currentcharge)*BT_Wh/periode
         #energy_consumption = 52*(difference/100) (en Wh)
-        #power_est = 3600*energy_consumption/periode (en Watt car periode est le temps entre deux mesures en seconde)
         if k>0:
             result.append(power_est)
             print('Current charge',currentcharge,'%')
